@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+
 import {
   View,
   Text,
@@ -10,7 +12,7 @@ import {
  * @returns {JSX.Element} - Rendered component or null if success
  */
 
-export default(props) => {
+const Congrats = (props) => {
   if(props.success) {
     return(
       <View data-test="component-congrats">
@@ -23,3 +25,9 @@ export default(props) => {
     )
   }
 }
+
+Congrats.propTypes = {
+  success: PropTypes.bool.isRequired,
+}
+
+export default Congrats
